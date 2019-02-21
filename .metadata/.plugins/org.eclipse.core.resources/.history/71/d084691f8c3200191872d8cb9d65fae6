@@ -1,0 +1,16 @@
+package cn.sxt.io;
+
+import java.io.UnsupportedEncodingException;
+
+public class TestDecode {
+
+	public static void main(String[] args) throws UnsupportedEncodingException{
+		String mrg="ÎÒ°®Äã£¡";
+		//±àÂë
+		byte[] datas=mrg.getBytes();
+		System.out.println(datas.length);
+		//½âÂë
+		mrg=new String(datas,0,datas.length,"gbk");
+		System.out.println(mrg);
+	}
+}

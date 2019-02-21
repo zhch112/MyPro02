@@ -1,0 +1,14 @@
+package cn.sxt.io;
+
+import java.io.File;
+
+public class TestIOStudy02 {
+
+	public static void main(String[] args){
+		File dir=new File("E:/迅雷下载/xuyao/10_网络编程（共11集）");
+		String[] s=dir.list();
+		for(String temp:s){
+			System.out.println(temp);
+		}
+	}
+}

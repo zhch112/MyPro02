@@ -1,0 +1,22 @@
+package cn.sxt.oop;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class TestCalendar01 {
+
+	public static void main(String[] args) throws ParseException {
+		String c="2019-2-16";
+		DateFormat df=new SimpleDateFormat("yyyy-MM-dd");
+		Date data=df.parse(c);//获取时间
+		Calendar a=new GregorianCalendar();
+		a.setTime(data);
+		
+		System.out.println("日\t一\t二\t三\t四\t五\t六");
+	}
+
+}

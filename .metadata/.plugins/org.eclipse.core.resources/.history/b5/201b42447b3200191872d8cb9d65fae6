@@ -1,0 +1,14 @@
+package cn.sxt.io;
+
+import java.io.File;
+
+public class TestIOStudy03 {
+
+	public static void main(String[] args){
+		File file=new File("F:/¶¯Âþ");
+		PrintFile(file);
+	}
+	public static void PrintFile(File f){
+		System.out.println(f.getName());
+	}
+}

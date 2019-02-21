@@ -1,0 +1,14 @@
+package cn.sxt.oop;
+
+public class TestWrappedClass01 {
+
+	public static void main(String[] args){
+		Integer a=3;//自动装箱 编译器自动调用            Integer a=a.valueOf(3)
+		int b=a;    //自动拆箱      编译器自动调用       int b=a.intValue();
+		System.out.println(a);
+		
+		//包装类空指针异常问题
+		Integer c=null;
+		int f=c;
+	}
+}

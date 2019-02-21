@@ -1,0 +1,18 @@
+package cn.sxt.oop;
+
+public class TestStaticInner {
+
+	public static void main(String[] args){
+		Outer.Inner inner=new Outer.Inner();
+		inner.fly();
+	}
+}
+
+class Outer{
+	
+	static class Inner{
+		void fly(){
+			System.out.println("¾²Ì¬ÄÚ²¿Àà");
+		}
+	}
+}

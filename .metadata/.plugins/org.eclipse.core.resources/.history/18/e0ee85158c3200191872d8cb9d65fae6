@@ -1,0 +1,14 @@
+package cn.sxt.io;
+
+public class TestDecode {
+
+	public static void main(String[] args){
+		String mrg="ÎÒ°®Äã£¡";
+		//±àÂë
+		byte[] datas=mrg.getBytes();
+		System.out.println(datas.length);
+		//½âÂë
+		mrg=new String("gbk");
+		System.out.println(mrg);
+	}
+}

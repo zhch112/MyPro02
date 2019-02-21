@@ -1,0 +1,23 @@
+package cn.sxt.io;
+
+import java.io.File;
+
+public class TestIOStudy {
+
+	public static void main(String[] args){
+	
+		File file=new File("F:/¶¯Âþ");
+	}
+	private static long count=0;
+	public static void count(File f){
+		if(null!=f&&f.exists()){
+			if(f.isFile()){
+			count+=	f.length();
+			}else{
+				for(File s:f.listFiles()){
+					count(s);
+				}
+			}
+		}
+	}
+}

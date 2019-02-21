@@ -1,0 +1,93 @@
+package cn.sxt.io;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+/**
+ * 文件字节输入流
+ * 1、创建源
+ * 2、选择流
+ * 3、操作
+ * 4、关闭
+ * 
+ *文件字节输出流
+ *1、创建源
+ *2、选择流
+ *3、操作
+ *4、关闭
+ * @author 喵喵了个眯
+ *
+ */
+public class TestIOStream01 {
+
+	public static void main(String[] args){
+		////文件字节输出流
+		//创建源
+		File f=new File("f.txt");
+		//选择流
+		//1、没有文件可以创建
+		//2、在原有基础上可以复制原来内容
+		//os=new FileOutputStream(f,true);
+		OutputStream os=null;
+		try {
+			//操作
+			os=new FileOutputStream(f,true);
+			String str="welcom to china";
+			byte[] datas=str.getBytes();
+			os.write(datas, 0, str.length());
+			//刷新
+			os.flush();
+		} catch (FileNotFoundException e2) {
+			e2.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			
+			//释放
+			if(null!=os)
+			os.close();
+		} catch (IOException e2) {
+			e2.printStackTrace();
+		}
+			
+		/**
+		
+		
+		////文件字节输入流
+		//创建源
+		File src=new File("abc.txt");
+		//选择流
+		InputStream s=null;
+		try {
+			//操作
+			s = new FileInputStream(src);
+			byte[] flush=new byte[5];///字节数组
+			int temp=-1;//接收长度
+			while((temp=s.read(flush))!=-1){  ///最后一个字符结束之后，为-1
+				//字节数组转换为字符串   ------解码
+				String str=new String(flush,0,temp); 
+				System.out.println(str);
+			}
+		//	int data1=s.read();
+		//	System.out.println((char)data1);
+		} catch (FileNotFoundException e1) {			
+			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			//关闭
+			if(null!=s){
+				s.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}*/
+	}
+}

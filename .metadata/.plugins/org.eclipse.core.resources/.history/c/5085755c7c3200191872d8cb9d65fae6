@@ -1,0 +1,25 @@
+package cn.sxt.io;
+
+import java.io.File;
+
+public class TestIOStudy03 {
+
+	public static void main(String[] args){
+		File file=new File("F:/¶¯Âþ");
+		PrintFile(file,0);
+	}
+	public static void PrintFile(File f,int deep){
+	//	System.out.println(f.getName());
+		for(int i=0;i<deep;i++){
+			System.out.print("-");
+		}
+		if(null==f||!f.exists()){
+			return;
+		}else if(f.isDirectory()) {
+			for(File s:f.listFiles()){
+				System.out.println(s.getName());
+				PrintFile(s,deep+1);
+			}
+		}
+	}
+}

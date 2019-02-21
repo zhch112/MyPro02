@@ -1,0 +1,9 @@
+package cn.sxt.oop;
+
+public class TestStirng2 {
+	public static void main(String[] args){
+		String s1="core java";
+		String s2="core java";
+		System.out.println(s1.charAt(3));
+	}
+}

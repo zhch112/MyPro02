@@ -1,0 +1,39 @@
+package cn.sxt.io;
+
+import java.io.File;
+
+public class TestIOStudy04 {
+
+	
+	public static void main(String[] args){
+		filesSrc dir=new filesSrc("F:/动漫"); 
+		System.out.println(dir.getLen());
+	}
+}
+class filesSrc{
+	//文件大小
+	private static long  len=0;
+	//文件夹路径
+	private String path;
+	//源
+	private File f;
+	public filesSrc(String path){//构造方法
+		this.path=path;
+		this.f=new File(path);
+		count(f);
+	}
+	public long getLen(){
+		return len;
+	}
+	private static void count(File f){
+		if(null!=f&&f.exists()){//不为空并且存在
+			if(f.isFile()){  //是否是一个文件
+			len+=f.length();
+			}else{//是一个文件夹
+				for(File s:f.listFiles()){//子孙级
+					count(s);
+				}
+			}
+		}
+	}
+}

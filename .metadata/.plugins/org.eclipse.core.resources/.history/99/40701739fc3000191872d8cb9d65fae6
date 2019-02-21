@@ -1,0 +1,20 @@
+package cn.sxt.oop;
+
+public class TestStringent {
+
+	public static void main(String[] args){
+		StringBuilder s=new StringBuilder();
+		for(int i=0;i<26;i++){
+			char temp=(char) ('a'+i);
+			s.append(temp);
+		}
+		System.out.println(s);
+		System.out.println(Integer.toHexString(s.hashCode()));
+		s.reverse();
+		System.out.println(s);
+		System.out.println(Integer.toHexString(s.hashCode()));
+		s.setCharAt(3,'уе');
+		System.out.print(s);
+		System.out.println(Integer.toHexString(s.hashCode()));
+	}
+}

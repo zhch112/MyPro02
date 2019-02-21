@@ -1,0 +1,14 @@
+package cn.sxt.io;
+
+import java.io.File;
+
+public class TestIOStudy01 {
+
+	public static void main(String[] args){
+		File f=new File("Ñ¸À×ÏÂÔØ\\a.txt");
+		System.out.println(f.getName());
+		System.out.println(f.getPath());
+		System.out.println(f.getAbsolutePath());
+		System.out.println(f.getParent());
+	}
+}

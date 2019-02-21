@@ -1,0 +1,33 @@
+package cn.sxt.io;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+public class TestCopy02 {
+
+	public static void main(String[] args){
+		File f=new File("E:/迅雷下载/xuyao/10_网络编程（共11集）");
+		copyDocumens(f);
+	}
+//	File f=new File("E:/迅雷下载/xuyao/10_网络编程（共11集）");
+//	File m=new File("E:/迅雷下载/aa");
+	public static  void copyDocumens(File f){
+		if(null==f||!f.exists()){
+			return;
+		}else if(f.isFile()){
+			System.out.println(f.getName());
+		/*	try {
+				InputStream src=new FileInputStream(f);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}*/
+		}else if(f.isDirectory()){
+			File[] file=f.listFiles();
+			for(File temp:file){
+				copyDocumens(temp);
+			}
+		}
+	}
+}

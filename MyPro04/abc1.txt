@@ -1,0 +1,18 @@
+hubei  weainiyangyun
+https://zhidao.baidu.com/question/1797288276108341187.html
+
+
+
+int i, j, k;
+int max;
+int min;
+Console.WriteLine("输入第一个数字" );
+i =Convert.ToInt32( Console.ReadLine());
+Console.WriteLine("输入第二个数字" ); 
+j = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("输入第三个数字" ); 
+k = Convert.ToInt32(Console.ReadLine());
+max=(i>j?i:j)>k?(i>j?i:j):k;
+min=(i<j?i:j)>k?(i<j?i:j):k; 
+Console.WriteLine("三个数值中最的是" + max + "最小的是" + min); 
+Console.ReadKey();

@@ -1,0 +1,22 @@
+package cn.sxt.oop;
+
+public class TestStringent {
+
+	public static void main(String[] args){
+		StringBuilder s=new StringBuilder();
+		for(int i=0;i<26;i++){
+			char temp=(char) ('a'+i);
+			s.append(temp);
+		}
+		System.out.println(s);
+		System.out.println(Integer.toHexString(s.hashCode()));
+		s.reverse();    //倒序
+		System.out.println(s);
+		System.out.println(Integer.toHexString(s.hashCode()));
+		s.setCharAt(3,'张');//修改   序号为3处的     字符为  张
+		System.out.println(s);
+		System.out.println(Integer.toHexString(s.hashCode()));
+		s.insert(1, '我').insert(2, '爱').insert(3, '你');//链式调用
+		System.out.println(s);
+	}
+}
